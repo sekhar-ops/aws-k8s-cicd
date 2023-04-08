@@ -1,16 +1,16 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-svc
+  name: java-app-svc
   annotations:
     networking.gke.io/load-balancer-type: "External"
 spec:
   type: LoadBalancer
   externalTrafficPolicy: Cluster
   selector:
-    app: nginx
+    app: java-app
   ports:
   - name: tcp-port
     protocol: TCP
-    port: 88
-    targetPort: 80
+    port: 80
+    targetPort: 8080
