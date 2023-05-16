@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: java-app
-        image: pylifedevops/app30:test
+        image: pylifedevops/awswebinar:latest
         ports:
         - containerPort: 8080
         imagePullPolicy: Always
